@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  scroll-behavior: smooth;
+}
+.gradient {
+  background: rgb(0, 0, 0);
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.hidden-object {
+  opacity: 0;
+
+  transform: translateY(200px);
+  transition: all 0.6s ease-out;
+}
+
+.show-object {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+.scrollbar {
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+.scrollbar::-webkit-scrollbar {
+  /* WebKit */
+  width: 0;
+  height: 0;
+}
